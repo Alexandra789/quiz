@@ -1,0 +1,5 @@
+.questions-area-wrapper {
+    background: var(--light_blue);
+    border-radius: 10px;
+    padding: 34px 35px 65px;
+}

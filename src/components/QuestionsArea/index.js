@@ -1,0 +1,1 @@
+export {QuestionsArea} from './QuestionsArea';
