@@ -1,2 +1,25 @@
 .counter {
+    margin-bottom: 38px;
+}
+
+.counter__pagination {
+    display: flex;
+    margin-bottom: 16px;
+    gap: 10px;
+}
+
+.counter__pagination-bullet {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--blue);
+}
+
+.counter__pagination-bullet.active {
+    background: var(--dark_blue);
+}
+
+.counter__text {
+    color: var(--gray);
+    font-size: 15px;
 }
