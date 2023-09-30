@@ -57,14 +57,16 @@ export const Question = (props) => {
                     ))
                 }
             </ul>
-            {currentQuestion > 1 ?
-                <button className="btn btn-white prev-question-btn" type="button"
-                        onClick={getPrevQuestion}>Назад</button> : ''
-            }
-            <button className="btn btn-blue next-question-btn"
-                    type={currentQuestion === 4 ? "submit" : "button"}
-                    onClick={getNextQuestion}
-            >{currentQuestion === 3 ? "Узнать результаты" : "Дальше"}</button>
+            <div className="buttons-wrapper">
+                {currentQuestion > 1 ?
+                    <button className="btn btn-white prev-question-btn" type="button"
+                            onClick={getPrevQuestion}>Назад</button> : ''
+                }
+                <button className="btn btn-blue next-question-btn"
+                        type={currentQuestion === 4 ? "submit" : "button"}
+                        onClick={getNextQuestion}
+                >{currentQuestion === 3 ? "Узнать результаты" : "Дальше"}</button>
+            </div>
         </form>
     )
 }
