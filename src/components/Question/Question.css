@@ -15,12 +15,10 @@
     font-size: 15px;
 }
 
-.question .btn {
-    margin-right: 10px;
-}
-
-.question .btn:last-of-type {
-    margin-right: 0;
+.buttons-wrapper {
+    gap: 16px 10px;
+    display: flex;
+    align-items: center;
 }
 
 input[type='radio'],
@@ -65,3 +63,17 @@ input[type='radio']:checked::after {
     visibility: visible;
 }
 
+@media (max-width: 459px) {
+    .buttons-wrapper .btn {
+        font-size: 12px;
+    }
+
+    .question__title {
+        font-size: 14px;
+    }
+
+    .question__list__item label {
+        font-size: 12px;
+    }
+
+}
