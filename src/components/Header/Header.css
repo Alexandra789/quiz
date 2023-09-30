@@ -1,2 +1,12 @@
 .header {
+    margin-bottom: 34px;
+}
+
+.header__title {
+    margin-bottom: 34px;
+    font-size: 40px;
+}
+
+.header__subtitle {
+    font-size: 20px;
 }
