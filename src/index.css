@@ -1,6 +1,8 @@
 :root {
-    --light_blue: #DDF3FF;;
-    --blue: #00A5FF;;
+    --light_blue: #DDF3FF;
+    --blue: #89D1F8;
+    --dark_blue: #00A5FF;
+    --gray: #9A9A9A;
 }
 
 * {
@@ -43,13 +45,6 @@ img {
     object-fit: contain;
 }
 
-.container {
-    padding: 0 16px;
-    max-width: 1372px;
-    width: 100%;
-    margin: 0 auto;
-}
-
 .btn {
     font-family: 'Inter', sans-serif;
     font-size: 15px;
@@ -72,21 +67,17 @@ img {
 
 .btn-white:hover {
     color: white;
-    background: var(--blue);
+    background: var(--dark_blue);
+    border: 1px solid var(--dark_blue);
 }
 
 .btn-blue {
     color: white;
-    background: var(--blue);
-    border: 1px solid var(--blue);
+    background: var(--dark_blue);
+    border: 1px solid var(--dark_blue);
 }
 
 .btn-blue:hover {
     color: black;
     background: white;
-}
-
-.title {
-    font-size: 40px;
-    font-weight: 700;
 }
