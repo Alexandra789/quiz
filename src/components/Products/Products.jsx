@@ -23,7 +23,7 @@ export const Products = () => {
     }, [isLoading]);
 
     const onLike = (e) => {
-        e.target.classList.toggle('active');
+        e.currentTarget.classList.toggle('active');
     }
 
     return (
@@ -32,10 +32,9 @@ export const Products = () => {
                 <div className="products-wrapper">
                     {productsData?.map(product => (
                         <div key={product.id} className="card">
-                            <div className="card__like" onClick={(e) => {
+                            <div className="card__img" onClick={(e) => {
                                 onLike(e)
-                            }}></div>
-                            <div className="card__img">
+                            }}>
                                 <img
                                     src={product.image}
                                     alt="product image"/>
@@ -49,8 +48,9 @@ export const Products = () => {
                             </div>
                         </div>))
                     }
-                </div> : <div className="loading"></div>
+                </div> : <div id="loader"></div>
             }
+
         </div>
     )
 }
