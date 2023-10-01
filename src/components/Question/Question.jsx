@@ -58,9 +58,9 @@ export const Question = (props) => {
                 }
             </ul>
             <div className="buttons-wrapper">
-                {currentQuestion > 1 ?
+                {currentQuestion > 1 &&
                     <button className="btn btn-white prev-question-btn" type="button"
-                            onClick={getPrevQuestion}>Назад</button> : ''
+                            onClick={getPrevQuestion}>Назад</button>
                 }
                 <button className="btn btn-blue next-question-btn"
                         type={currentQuestion === 4 ? "submit" : "button"}

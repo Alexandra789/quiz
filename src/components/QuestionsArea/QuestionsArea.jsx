@@ -16,15 +16,13 @@ export const QuestionsArea = () => {
         <div className="container">
             <Header currentQuestion={currentQuestion} totalQuestions={totalQuestions}/>
             <div className="questions-area">
-                {currentQuestion <= questions.length ?
+                {currentQuestion <= questions.length &&
                     <div className="questions-area-wrapper">
                         <Counter currentQuestion={currentQuestion} questions={questions}/>
                         <Question currentQuestion={currentQuestion} setCurrentQuestion={setCurrentQuestion}
                                   questions={questions}/>
-                    </div> : ''}
-                {currentQuestion > questions.length ?
-                    <Products/> : ''
-                }
+                    </div>}
+                {currentQuestion > questions.length && <Products/>}
             </div>
         </div>
     )
