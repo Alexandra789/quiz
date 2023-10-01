@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import {API} from "../../store/api";
 
 import './Products.css';
+import {Pagination} from "../Pagination";
 
 export const Products = () => {
     const [productsData, setProductsData] = useState(null);
@@ -29,26 +30,30 @@ export const Products = () => {
     return (
         <div className="products">
             {isLoading ?
-                <div className="products-wrapper">
-                    {productsData?.map(product => (
-                        <div key={product.id} className="card">
-                            <div className="card__img" onClick={(e) => {
-                                onLike(e)
-                            }}>
-                                <img
-                                    src={product.image}
-                                    alt="product image"/>
+                <div>
+                    <div className="products-wrapper">
+                        {productsData?.map(product => (
+                            <div key={product.id} className="card">
+                                <div className="card__img" onClick={(e) => {
+                                    onLike(e)
+                                }}>
+                                    <img
+                                        src={product.image}
+                                        alt="product image"/>
+                                </div>
+                                <h3 className="card__title">{product.title}</h3>
+                                <div className="card__price">
+                                    {product.oldPrice &&
+                                        <p className="card__price__discount">{product.oldPrice}</p>
+                                    }
+                                    <p className="card__price__current">{product.price}<span>руб</span></p>
+                                </div>
                             </div>
-                            <h3 className="card__title">{product.title}</h3>
-                            <div className="card__price">
-                                {product.oldPrice &&
-                                    <p className="card__price__discount">{product.oldPrice}</p>
-                                }
-                                <p className="card__price__current">{product.price}<span>руб</span></p>
-                            </div>
-                        </div>))
-                    }
-                </div> : <div id="loader"></div>
+                        ))}
+                    </div>
+                    <Pagination/>
+                </div>
+                : <div id="loader"></div>
             }
 
         </div>

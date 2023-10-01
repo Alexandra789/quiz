@@ -1,2 +1,28 @@
 .pagination {
+    display: flex;
+    align-items: flex-end;
+    gap: 12px;
+    margin-top: 62px;
+}
+
+.pagination .page {
+    color: var(--light_gray);
+    font-size: 20px;
+    line-height: normal;
+    cursor: pointer;
+    user-select: none;
+}
+
+.pagination .break {
+    color: var(--light_gray);
+    cursor: pointer;
+    user-select: none;
+}
+
+.pagination .page.active, .pagination .page:hover {
+    color: var(--dark_blue);
+}
+
+.previous, .next {
+    display: none;
 }
